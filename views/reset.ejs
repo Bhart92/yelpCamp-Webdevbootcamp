@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+
+<form action="/reset/<%= token %>" method="POST">
+  <div class="form-group">
+    <label for="password">New Password</label>
+    <input type="text" name="password" value="" placeholder="New Password" autofocus="autofocus" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="confirm">Confirm Password</label>
+      <input type="text" name="confirm" value="" placeholder="Confirm Password" class="form-control" />
+      </div>
+      <div class="form-group">
+        <input type="submit" value="submit" />
+        </div>
+  </form>
+
+  <% include ./partials/footer %>

@@ -1,0 +1,111 @@
+body{
+  background: #FBFBFF;
+}
+.row{
+  overflow: hidden;
+  width: 100%;
+}
+.col-md-9{
+  margin: 0 auto;
+  display: block;
+  float: unset;
+}
+h1{
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
+
+.thumbnail img {
+    width: 75%;
+}
+ul.campgroundUl{
+  width: 100%;
+}
+ul li.campgroundList{
+text-align: center;
+  list-style-type: none;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+#delete-form {
+    display: inline;
+}
+
+.checked {
+    color: orange;
+}
+footer{
+  text-align: center;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav.navbar.navbar-default{
+  background: #565656;
+  border-color: transparent;
+  color: #fff;
+}
+.navbar-default .navbar-brand{
+  color: #fff;
+  transition: all .35s ease-in-out;
+}
+
+.navbar-default .navbar-nav>li>a{
+  color: #fff;
+  transition: all .35s ease-in-out;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-brand:hover{
+  color: #00BFFF;
+}
+form{
+  display: inline;
+}
+.btn-primary{
+  background-color: deepskyblue;
+  border: transparent;
+}
+.btn-primary:hover{
+color: #565656;
+background-color: deepskyblue;
+border: transparent;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus{
+  background: deepskyblue;
+}
+ .pagination>.active>span:hover{
+   background: deepskyblue;
+   outline: black;
+ }
+ .label-primary{
+   background-color: #20BF55;
+ }
+.btn-warning{
+  background: #0B4F6C;
+  border: .5px solid #4D7F94;
+  transition: all .35s ease-in-out;
+}
+.btn-warning:hover{
+  background: transparent;
+  color: #4D7F94;
+  border: .5px solid #4D7F94;
+}
+.btn-danger{
+  background: #20BF55;
+  border: .5px solid #4D7F94;
+  transition: all .35s ease-in-out;
+}
+.btn-danger:hover{
+  background: transparent;
+  color: #20BF55;
+  border: .5px solid #20BF55;
+}

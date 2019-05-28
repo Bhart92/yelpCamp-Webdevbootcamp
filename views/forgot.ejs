@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+<h1>Reset your password</h1>
+<div class="row">
+  <div class="col-md-12">
+    <form action="/forgot" method="POST">
+      <legend>
+        Forgot Password
+        </legend>
+        <div class="form-group">
+          <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email asscoiated with account" autofocus class="form-control" />
+        </div>
+        <div class="form-group">
+        <input type="submit" value="Reset Password" class="btn btn-primary" />
+        </div>
+      </form>
+    </div>
+  </div>
+<% include ./partials/footer %>
