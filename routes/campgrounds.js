@@ -19,7 +19,6 @@ var imageFilter = function (req, file, cb) {
     cb(null, true);
 };
 var upload = multer({ storage: storage, fileFilter: imageFilter})
-
 var cloudinary = require('cloudinary');
 cloudinary.config({
   cloud_name: 'brandeno92',
@@ -76,9 +75,12 @@ router.get("/", function(req, res){
 });
 //CREATE - add new campground to DB
 router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, res) {
+  if(!req.file){
+    req.flash('error', "it didnt work");
+    res.redirect("back");
+  } else{
     cloudinary.v2.uploader.upload(req.file.path, function(err, result) {
       if(err) {
-        req.flash('error', err.message);
         return res.redirect('back');
       }
       // add cloudinary url for the image to the campground object under image property
@@ -98,6 +100,7 @@ router.post("/", middleware.isLoggedIn, upload.single('image'), function(req, re
         res.redirect('/campgrounds/' + campground.id);
       });
     });
+  }
 });
 // the "new: route -- shows form"
 router.get("/new", middleware.isLoggedIn, function(req, res){

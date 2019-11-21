@@ -78,7 +78,7 @@ router.post("/forgot", function(req, res){
     function(done){
       crypto.randomBytes(20, function(err, buf){
         if(err){
-          req.flash("Something went wrong, plase try again");
+          req.flash("Something went wrong, please try again");
           res.redirect("back");
         }
         var token = buf.toString('hex');

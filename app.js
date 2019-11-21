@@ -17,11 +17,11 @@ var reviewRoutes = require("./routes/reviews");
 var flash = require("connect-flash");
 
 //Config
-// mongoose.connect("mongodb://localhost:27017/yelpCamp", {useNewUrlParser: true});
-mongoose.connect("mongodb+srv://bhart:bella21@cluster0-9mb0e.mongodb.net/yelpCamp?retryWrites=true", {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-});
+mongoose.connect("mongodb://localhost:27017/yelpCamp", {useNewUrlParser: true});
+// mongoose.connect("mongodb+srv://bhart:bella21@cluster0-9mb0e.mongodb.net/yelpCamp?retryWrites=true", {
+//   useNewUrlParser: true,
+//   useCreateIndex: true,
+// });
 
 
 
@@ -67,7 +67,8 @@ app.get("/", function(req, res){
     res.render("landing");
 });
 
-var port = process.env.PORT || 3000;
-app.listen(port, function(){
+
+// var port = process.env.PORT || 3000;
+app.listen(3000, function(){
     console.log("live");
 });
